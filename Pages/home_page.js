@@ -2,7 +2,7 @@ import BasePage from "./base_page";
 import fs from "fs";
 import * as config from "../config";
 import { expect } from "@playwright/test";
-const testData = JSON.parse(fs.readFileSync(`./data/users.json`, `utf-8`));
+const testData = JSON.parse(fs.readFileSync(`../Data/user.json`, `utf-8`));
 import * as home_page_loc from "../Locators/home_page_locator";
 
 class HomePage extends BasePage {
