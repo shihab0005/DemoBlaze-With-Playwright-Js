@@ -8,7 +8,7 @@ class HomePage extends BasePage {
   constructor(page) {
     super(page);
   }
-
+// open url
   async open_url() {
     await this.open(config.PageUrl);
   }
