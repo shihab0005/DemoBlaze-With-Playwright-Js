@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:one": "npx playwright test TC_001_home_page.spec.js",
+    "test:two": "npx playwright test TC_002_signin_page.spec.js",
+    "html-report": "npx playwright test --reporter=html && npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
