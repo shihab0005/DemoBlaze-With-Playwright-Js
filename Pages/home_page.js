@@ -8,7 +8,7 @@ class HomePage extends BasePage {
   constructor(page) {
     super(page);
   }
-// open url
+// open url git commit -m "text"
   async open_url() {
     await this.open(config.PageUrl);
   }
