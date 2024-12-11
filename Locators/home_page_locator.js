@@ -7,3 +7,10 @@ export const footer_container = "#footc";
 export const footer_about_us = "//div[@id='fotcont']/div[1]";
 export const footer_get_in_touch = "//div[@id='fotcont']/div[2]";
 export const footer_logo = "//div[@id='fotcont']/div[3]";
+
+export const nav_home = "li[class='nav-item active'] a[class='nav-link']";
+export const nav_contact = "a[data-target='#exampleModal']";
+export const nav_aboutus = "a[data-target='#videoModal']";
+export const nav_cart = "#cartur";
+export const nav_login = "#login2";
+export const nav_signin = "#signin2";

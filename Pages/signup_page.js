@@ -2,7 +2,8 @@ import BasePage from "./base_page.js";
 
 import * as config from "../config.js";
 
-import * as signup_loc from "../Locators/signup_page_locator.js"
+import * as signup_loc from "../Locators/signup_page_locator.js";
+import * as home_loc from "../Locators/home_page_locator.js";
 
 import { expect } from "@playwright/test";
 
@@ -11,20 +12,23 @@ class SignupPage extends BasePage {
     super(page);
   }
 
-  async openWebsite() {
-    await this.open(config.PageUrl);
+  async verify_all_nav_isVisible() {
+    await this.isElementVisible(home_loc.nav_home, config.notVisibleText);
+    await this.isElementVisible(home_loc.nav_aboutus, config.notVisibleText);
+    await this.isElementVisible(home_loc.nav_contact, config.notVisibleText);
+    await this.isElementVisible(home_loc.nav_login, config.notVisibleText);
+    await this.isElementVisible(home_loc.nav_signin, config.notVisibleText);
+    await this.isElementVisible(home_loc.nav_cart, config.notVisibleText);
   }
 
-  async pageUrl() {
-    const url = await this.getUrl();
-    console.log("Page Url: " + url);
-    await expect(this.page).toHaveURL();
-  }
-
-  async pageTitle() {
-    const title = await this.getTitle();
-    console.log("Page Title: " + title);
-    await expect(this.page).toHaveTitle();
+  async verify_all_nav_isEnable() {
+    await this.isElementEnabled(home_loc.nav_home, config.notEnabledText);
+    await this.isElementEnabled(home_loc.nav_aboutus, config.notEnabledText);
+    await this.isElementEnabled(home_loc.nav_cart, config.notEnabledText);
+    await this.isElementEnabled(home_loc.nav_cart, config.notEnabledText);
+    await this.isElementEnabled(home_loc.nav_contact, config.notEnabledText);
+    await this.isElementEnabled(home_loc.nav_login, config.notEnabledText);
+    await this.isElementEnabled(home_loc.nav_signin, config.notEnabledText);
   }
 }
 

@@ -6,9 +6,12 @@ const test = fixture.extend({
   signupPage: async ({ page }, use) => {
     await use(new SignupPage(page));
   },
-  homePage:async ({page},use)=>{
+  homePage: async ({ page }, use) => {
     await use(new HomePage(page));
-  }
+  },
+  signupPage: async ({ page }, use) => {
+    await use(new SignupPage(page));
+  },
 });
 
 export default test;
