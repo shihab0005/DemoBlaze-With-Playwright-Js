@@ -1,5 +1,5 @@
 export const testDir = "tests";
-export const timeout = 60000;
+export const timeout = 50000;
 export const retries = 0;
 // export const reporter = [
 //   ["html"],
@@ -18,7 +18,7 @@ export const projects = [
       video: `retain-on-failure`,
       trace: `retain-on-failure`,
       launchOptions: {
-        slowMo: 500,
+        slowMo: 700,
       },
     },
   },

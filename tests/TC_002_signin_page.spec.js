@@ -13,4 +13,14 @@ test.describe("Verify all functionality of Sign Up Page", async () => {
     await signupPage.verify_all_nav_isVisible();
     await signupPage.verify_all_nav_isEnable();
   });
+
+  test("Login with valid credentials and handle Alert Popup", async ({
+    signupPage,
+  }) => {
+    await signupPage.open_signup_form();
+    await signupPage.enter_username();
+    await signupPage.enter_password();
+    await signupPage.handleAlert();
+    await signupPage.click_signup_btn();
+  });
 });

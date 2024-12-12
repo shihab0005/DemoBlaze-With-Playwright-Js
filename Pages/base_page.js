@@ -40,6 +40,25 @@ class BasePage {
       throw new Error(`${errorMessage}`);
     }
   }
+
+  async waitAndFill(selector, text) {
+    return await this.page.fill(selector, text);
+  }
+  async waitAndClick(selector) {
+    return await this.page.click(selector);
+  }
+
+  async handleDialogs(){
+    this.page.on("dialog", async (dialog) => {
+      if (dialog.type() === "alert") {
+        await dialog.accept();
+      } else if (dialog.type() === "confirm") {
+        await dialog.accept(); // or dialog.dismiss();
+      } else if (dialog.type() === "prompt") {
+        await dialog.accept("Shihab"); // or dialog.dismiss();
+      }
+    });
+  }
 }
 
 export default BasePage;

@@ -30,6 +30,26 @@ class SignupPage extends BasePage {
     await this.isElementEnabled(home_loc.nav_login, config.notEnabledText);
     await this.isElementEnabled(home_loc.nav_signin, config.notEnabledText);
   }
+
+  async open_signup_form(){
+    await this.waitAndClick(signup_loc.signup_nav)
+  }
+
+
+  async enter_username() {
+    await this.waitAndFill(signup_loc.signup_username, config.username);
+  }
+
+  async enter_password() {
+    await this.waitAndFill(signup_loc.signup_password, config.password);
+  }
+
+  async handleAlert() {
+    await this.handleDialogs();
+  }
+  async click_signup_btn() {
+    await this.waitAndClick(signup_loc.signup_signupBtn);
+  }
 }
 
 export default SignupPage;
