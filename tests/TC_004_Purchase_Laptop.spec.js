@@ -1,20 +1,7 @@
-/* Scenario 1: 
-   Verify Verify Login functionality.
-
-Scenario Description: 
--Verify login with valid credentials.
-
-
-Test Steps:
-1.	Open website and verify url and title of the page.
-2.	Verify open website and check url and title.
-3.	Login With Valid Credentials and Verify Successfully login.
-
-*/
 import test from "../TestFixture/fixture";
 
-test.describe.serial("Verify Login functionality", () => {
-  test("Verify login with valid credentials", async ({
+test.describe.serial("Successful laptop Purchase", () => {
+  test("Purchase Laptop and verify Successfully Purchase", async ({
     loginpage,
     homePage,
   }) => {
@@ -30,6 +17,11 @@ test.describe.serial("Verify Login functionality", () => {
       await loginpage.enter_password();
       await loginpage.click_login_btn();
       await loginpage.verify_login_successfully();
+    });
+
+    await test.step("Find and select Laptop from list", async () => {
+      await homePage.click_laptop_category();
+      await homePage.find_laptop_from_list();
     });
   });
 });

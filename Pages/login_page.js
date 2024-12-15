@@ -8,7 +8,7 @@ class LoginPage extends BasePage {
     super(page);
   }
 
-  async open_login_page() {
+  async open_login_form() {
     await this.waitAndClick(loign_loc.login_nav);
   }
 
@@ -21,6 +21,13 @@ class LoginPage extends BasePage {
   }
   async click_login_btn() {
     await this.waitAndClick(loign_loc.login_loginBtn);
+  }
+
+  async verify_login_successfully() {
+    await this.verifyElementContainsText(
+      loign_loc.login_loginUser,
+      config.username1
+    );
   }
 }
 

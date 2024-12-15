@@ -6,6 +6,8 @@
   "scripts": {
     "test:one": "npx playwright test TC_001_home_page.spec.js",
     "test:two": "npx playwright test TC_002_signin_page.spec.js",
+    "test:three": "npx playwright test TC_003_login_page.spec.js",
+    "test:four": "npx playwright test TC_004_Purchase_Laptop.spec.js",
     "html-report": "npx playwright test TC_002_signin_page.spec.js --reporter=html && npx playwright show-report"
   },
   "keywords": [],

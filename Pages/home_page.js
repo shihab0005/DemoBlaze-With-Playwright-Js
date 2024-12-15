@@ -8,7 +8,7 @@ class HomePage extends BasePage {
   constructor(page) {
     super(page);
   }
-// open url git commit -a -m "text1"
+  // open url git commit -a -m "text1"
   async open_url() {
     await this.open(config.PageUrl);
   }
@@ -77,6 +77,16 @@ class HomePage extends BasePage {
     await this.isElementVisible(
       home_page_loc.footer_logo,
       config.notVisibleText
+    );
+  }
+
+  async click_laptop_category() {
+    await this.waitAndClick(home_page_loc.category_laptops);
+  }
+  async find_laptop_from_list() {
+    await this.findElecmentFromList(
+      home_page_loc.all_laptops,
+      config.laptopItem
     );
   }
 }

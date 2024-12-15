@@ -48,7 +48,7 @@ class BasePage {
     return await this.page.click(selector);
   }
 
-  async handleDialogs(){
+  async handleDialogs() {
     this.page.on("dialog", async (dialog) => {
       if (dialog.type() === "alert") {
         await dialog.accept();
@@ -58,6 +58,23 @@ class BasePage {
         await dialog.accept("Shihab"); // or dialog.dismiss();
       }
     });
+  }
+
+  async verifyElementContainsText(selector, text) {
+    await this.page.locator(selector).waitFor();
+    return await expect(this.page.locator(selector)).toContainText(text);
+  }
+
+  async findElecmentFromList(select, text) {
+    const items = this.page.locator(select);
+
+    for (let i = 0; i < (await items.count()); i++) {
+      const getText = await items.nth(i).textContent();
+      console.log(getText);
+      if (getText.includes(text)) {
+        await items.nth(i).click();
+      }
+    }
   }
 }
 
