@@ -89,5 +89,70 @@ class HomePage extends BasePage {
       config.laptopItem
     );
   }
+
+  async verify_selected_itme_successfully_display() {
+    await this.verifyElementContainsText(
+      home_page_loc.item_title,
+      config.laptopItem
+    );
+  }
+
+  async click_add_to_cart_btn() {
+    await this.waitAndClick(home_page_loc.addtoCart);
+  }
+  async click_cart_nav() {
+    await this.waitAndClick(home_page_loc.nav_cart);
+  }
+  async click_place_order_btn() {
+    await this.waitAndClick(home_page_loc.place_order_btn);
+  }
+
+  async purchase_name() {
+    await this.waitAndFill(home_page_loc.place_order_name, config.username1);
+  }
+  async purchase_country() {
+    await this.waitAndFill(home_page_loc.place_order_country, config.country);
+  }
+  async purchase_city() {
+    await this.waitAndFill(home_page_loc.place_order_city, config.city);
+  }
+  async purchase_credit_card() {
+    await this.waitAndFill(home_page_loc.place_order_card, config.card);
+  }
+  async purchase_month() {
+    await this.waitAndFill(home_page_loc.place_order_month, config.month);
+  }
+  async purchase_year() {
+    await this.waitAndFill(home_page_loc.place_order_year, config.year);
+  }
+
+  async click_purchase_btn() {
+    await this.waitAndClick(home_page_loc.place_order_purchase_btn);
+  }
+
+  async verify_welcome_msg() {
+    await this.verifyElementContainsText(
+      home_page_loc.thanks_msg_loc,
+      config.welcome_text
+    );
+  }
+
+  async click_on_ok_btn() {
+    await this.waitAndClick(home_page_loc.ok_btn);
+  }
+
+  async verify_card_number() {
+    await this.verifyElementContainsText(
+      home_page_loc.purches_details_loc,
+      config.card
+    );
+  }
+
+  async verify_customer_name() {
+    await this.verifyElementContainsText(
+      home_page_loc.purches_details_loc,
+      config.username1
+    );
+  }
 }
 export default HomePage;

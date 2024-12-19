@@ -11,3 +11,10 @@ export const laptopItem = "MacBook air";
 export const notVisibleText = "Element Not Visible. Check Failed!";
 export const notAvailabletext =
   "Element is visible and available in DOM. Check Failed!";
+
+export const country = "Bangladesh";
+export const city = "Dhaka";
+export const card = "1234567";
+export const month = "January";
+export const year = "2024";
+export const welcome_text="Thank you for your purchase!"
