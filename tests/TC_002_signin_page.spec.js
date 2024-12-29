@@ -7,7 +7,7 @@ test.describe("Verify all functionality of Sign Up Page", async () => {
     await homePage.page_title_verification();
   });
 
-  test("Verify All element of Navbars are visible and enabled to click", async ({
+  test("@smoke:Verify All element of Navbars are visible and enabled to click", async ({
     signupPage,
   }) => {
     await signupPage.verify_all_nav_isVisible();
