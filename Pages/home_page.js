@@ -83,10 +83,20 @@ class HomePage extends BasePage {
   async click_laptop_category() {
     await this.waitAndClick(home_page_loc.category_laptops);
   }
+  async click_monitor_category() {
+    await this.waitAndClick(home_page_loc.nav_home);
+    await this.waitAndClick(home_page_loc.category_monitors);
+  }
   async find_laptop_from_list() {
     await this.findElecmentFromList(
-      home_page_loc.all_laptops,
+      home_page_loc.all_items,
       config.laptopItem
+    );
+  }
+  async find_monitor_from_list() {
+    await this.findElecmentFromList(
+      home_page_loc.all_items,
+      config.monitorItem
     );
   }
 
