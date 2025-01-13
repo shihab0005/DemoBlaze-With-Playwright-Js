@@ -106,6 +106,13 @@ class HomePage extends BasePage {
       config.laptopItem
     );
   }
+  async verify_selected_itme_successfully_display() {
+    await this.verifyElementContainsText(
+      home_page_loc.item_title,
+      config.monitorItem
+    );
+  }
+  
 
   async click_add_to_cart_btn() {
     await this.waitAndClick(home_page_loc.addtoCart);
