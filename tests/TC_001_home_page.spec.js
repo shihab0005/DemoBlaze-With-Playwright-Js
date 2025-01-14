@@ -4,7 +4,6 @@ verify all the element of the home page of the website.
 Scenario Description: 
 User open the website and verifies all the elements of the home page.This is like a Smoke test. 
 
-
 Test Steps:
 1.	Open website and verify url and title of the page.
 2.	Verify site Logo is visible & enable to click or not.

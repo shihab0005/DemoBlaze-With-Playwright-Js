@@ -8,7 +8,7 @@
     "test:two": "npx playwright test TC_002_signin_page.spec.js",
     "test:three": "npx playwright test TC_003_login_page.spec.js",
     "test:four": "npx playwright test TC_004_Purchase_Laptop.spec.js",
-    "html-report": "npx playwright test --reporter=html && npx playwright show-report"
+    "test:all_test_with_html-report": "npx playwright test --reporter=html && npx playwright show-report"
   },
   "keywords": [],
   "author": "",
