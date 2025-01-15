@@ -1,8 +1,6 @@
 import test from "../TestFixture/fixture";
 import * as config from "../config";
-import { expect } from "@playwright/test";
-
-import * as home_page_loc from "../";
+import * as home_page_loc from "../Locators/home_page_locator";
 
 test.describe.serial("Successful Purchase Multiple Item", () => {
   test("Successfully Purchase multiple item from different Category", async ({
@@ -24,19 +22,26 @@ test.describe.serial("Successful Purchase Multiple Item", () => {
       await loginpage.verify_login_successfully();
     });
 
-    // await test.step("Find and select Laptop from list", async () => {
-    //   await homePage.click_laptop_category();
-    //   await homePage.find_laptop_from_list();
-    //   await homePage.verify_selected_itme_successfully_display();
-    //   await signupPage.handleAlert();
-    //   await homePage.click_add_to_cart_btn();
-    //   // await homePage.click_cart_nav();
-    // });
+    await test.step("Find and select Laptop from list", async () => {
+      await homePage.click_laptop_category();
+      await homePage.find_laptop_from_list();
+      await homePage.verify_selected_itme_successfully_display(
+        home_page_loc.item_title,
+        config.laptopItem
+      );
+      await signupPage.handleAlert();
+      await homePage.click_add_to_cart_btn();
+      //await homePage.click_cart_nav();
+    });
 
     await test.step("Back to the home page and select category Moitor and a monitor to the cart", async () => {
+      await homePage.click_on_home_nav();
       await homePage.click_monitor_category();
       await homePage.find_monitor_from_list();
-      await homePage.verify_selected_itme_successfully_display();
+      await homePage.verify_selected_itme_successfully_display(
+        home_page_loc.item_title,
+        config.monitorItem
+      );
       await signupPage.handleAlert();
       await homePage.click_add_to_cart_btn();
       await homePage.click_cart_nav();

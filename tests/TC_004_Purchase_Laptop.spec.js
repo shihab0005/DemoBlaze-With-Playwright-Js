@@ -1,4 +1,6 @@
 import test from "../TestFixture/fixture";
+import * as config from "../config";
+import * as home_page_loc from "../Locators/home_page_locator";
 
 test.describe.serial("Successful laptop Purchase", () => {
   test("Purchase Laptop and verify Successfully Purchase", async ({
@@ -26,7 +28,10 @@ test.describe.serial("Successful laptop Purchase", () => {
     });
 
     await test.step("Verify Successfully item add to cart for order place", async () => {
-      await homePage.verify_selected_itme_successfully_display();
+      await homePage.verify_selected_itme_successfully_display(
+        home_page_loc.item_title,
+        config.laptopItem
+      );
       await signupPage.handleAlert();
       await homePage.click_add_to_cart_btn();
       await homePage.click_cart_nav();

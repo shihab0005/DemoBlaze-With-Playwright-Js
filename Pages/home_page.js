@@ -83,15 +83,14 @@ class HomePage extends BasePage {
   async click_laptop_category() {
     await this.waitAndClick(home_page_loc.category_laptops);
   }
-  async click_monitor_category() {
+  async click_on_home_nav() {
     await this.waitAndClick(home_page_loc.nav_home);
+  }
+  async click_monitor_category() {
     await this.waitAndClick(home_page_loc.category_monitors);
   }
   async find_laptop_from_list() {
-    await this.findElecmentFromList(
-      home_page_loc.all_items,
-      config.laptopItem
-    );
+    await this.findElecmentFromList(home_page_loc.all_items, config.laptopItem);
   }
   async find_monitor_from_list() {
     await this.findElecmentFromList(
@@ -100,19 +99,16 @@ class HomePage extends BasePage {
     );
   }
 
-  async verify_selected_itme_successfully_display() {
-    await this.verifyElementContainsText(
-      home_page_loc.item_title,
-      config.laptopItem
-    );
+  async verify_selected_itme_successfully_display(text_loc, exp_text) {
+    await this.verifyElementContainsText(text_loc, exp_text);
   }
-  async verify_selected_itme_successfully_display() {
-    await this.verifyElementContainsText(
-      home_page_loc.item_title,
-      config.monitorItem
-    );
-  }
-  
+
+  // async verify_selected_itme_successfully_display() {
+  //   await this.verifyElementContainsText(
+  //     home_page_loc.item_title,
+  //     config.monitorItem
+  //   );
+  // }
 
   async click_add_to_cart_btn() {
     await this.waitAndClick(home_page_loc.addtoCart);
