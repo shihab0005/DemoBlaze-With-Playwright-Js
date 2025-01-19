@@ -15,10 +15,10 @@ export const nav_cart = "#cartur";
 export const nav_login = "#login2";
 export const nav_signin = "#signin2";
 export const category_laptops = "(//a[@id='itemc'])[2]";
-export const category_monitors = "(//a[@id='itemc'])[3]";
+export const category_monitors = "//a[text()='Monitors']";
 export const all_items = ".card-title a";
 export const item_title = "#tbodyid h2";
-export const addtoCart = ".btn.btn-success.btn-lg";
+export const addtoCart = "//a[normalize-space()='Add to cart']";
 export const place_order_btn = ".btn.btn-success";
 
 export const place_order_name = "#name";
