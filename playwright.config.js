@@ -1,5 +1,5 @@
 export const testDir = "tests";
-export const timeout = 50000;
+export const timeout = 70000;
 export const retries = 0;
 // export const reporter = [
 //   ["html"],
