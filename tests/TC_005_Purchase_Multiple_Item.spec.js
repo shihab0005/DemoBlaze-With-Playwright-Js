@@ -41,7 +41,7 @@ test.describe.serial("Successful Purchase Multiple Item",()=>{
              await homePage.verify_selected_itme_successfully_display(
                 home_page_loc.item_title,
                 config.monitorItem);
-            //await signupPage.handleAlert();
+            await signupPage.handleAlert();
             await homePage.click_add_to_cart_btn();
             await homePage.click_cart_nav();
             await homePage.click_place_order_btn();

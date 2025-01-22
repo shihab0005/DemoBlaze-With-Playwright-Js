@@ -21,7 +21,12 @@ class BasePage {
     return await this.page.pause();
   }
 
+  async waitForLocator(selector){
+    await this.page.locator(selector).waitFor();
+  }
+
   async isElementVisible(selector, errorMessage) {
+   
     const element = this.page.locator(selector);
     try {
       const isVisible = await element.isVisible();
@@ -45,6 +50,7 @@ class BasePage {
     return await this.page.fill(selector, text);
   }
   async waitAndClick(selector) {
+    //await this.page.locator(selector).waitFor();
     return await this.page.click(selector);
   }
 

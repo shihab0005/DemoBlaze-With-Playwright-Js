@@ -18,7 +18,7 @@ export const projects = [
       video: `retain-on-failure`,
       trace: `retain-on-failure`,
       launchOptions: {
-        slowMo: 700,
+        slowMo: 600,
       },
     },
   },

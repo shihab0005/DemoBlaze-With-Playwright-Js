@@ -1,0 +1,1 @@
+export const product_table = "//tbody[@id='tbodyid']/tr[1]";
