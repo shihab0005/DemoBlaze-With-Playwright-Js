@@ -9,6 +9,7 @@
     "test:three": "npx playwright test TC_003_login_page.spec.js",
     "test:four": "npx playwright test TC_004_Purchase_Laptop.spec.js",
     "test:five": "npx playwright test TC_005_Purchase_Multiple_Item.spec.js",
+    "test:six": "npx playwright test TC_006_delete_item_from_cart.spec.js",
     "test:all_test_with_html-report": "npx playwright test --reporter=html && npx playwright show-report"
   },
   "keywords": [],

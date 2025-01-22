@@ -23,24 +23,6 @@ test.describe.serial("Successful Purchase Multiple Item",()=>{
             await loginpage.verify_login_successfully();
           });
 
-        //   await test.step("Find and select Laptop from list", async () => {
-        //     await homePage.click_laptop_category();
-        //     await homePage.find_laptop_from_list();
-        //   });
-      
-        //   await test.step("Verify Successfully item add to cart for order place", async () => {
-        //     await homePage.verify_selected_itme_successfully_display(
-        //       home_page_loc.item_title,
-        //       config.laptopItem
-        //     );
-        //     await signupPage.handleAlert();
-        //     await homePage.click_add_to_cart_btn();
-        //     await homePage.click_cart_nav();
-        //     await homePage.click_place_order_btn();
-        //   });
-      
-          
-
           await test.step("Find and select Laptop from list", async () => {
             await homePage.click_laptop_category();
              await homePage.find_laptop_from_list();
@@ -59,7 +41,7 @@ test.describe.serial("Successful Purchase Multiple Item",()=>{
              await homePage.verify_selected_itme_successfully_display(
                 home_page_loc.item_title,
                 config.monitorItem);
-            // await signupPage.handleAlert();
+            //await signupPage.handleAlert();
             await homePage.click_add_to_cart_btn();
             await homePage.click_cart_nav();
             await homePage.click_place_order_btn();
