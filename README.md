@@ -1,4 +1,4 @@
-# DemoBlaze_with_Page_Object_Design_Pattern_Framework
+# DemoBlaze_Page_Object_Design_Pattern_Framework
 
 ## Application Under Test
 
@@ -21,13 +21,19 @@
 
 ## Scenarios
 ```bash
-Scenario 1: Verify user Login with all required field and valid, invalid credentials and messages.
+Scenario 1: Verify all the element of the home page of the website..
 
 Scenario Description: 
-User Navigate To the Login page and Login with valid and invalid Credentials and verify all error message
-and Track Successfully login. 
+User open the website and verifies all the elements of the home page.This is like a Smoke test. 
 
-Testname: Test_001_login_page.spec.js
+Test Steps:
+1.	Open website and verify url and title of the page.
+2.	Verify site Logo is visible & enable to click or not.
+3.	Verify sit navbar and carosol are visible or not.
+4.	Verify Product Category and Products are visible or not.
+5.	Verify all content of footer section are visible or not. 
+
+Testname: TC_001_home_page.spec.js
 ```
 ```bash
 Scenario 2: Add new employee with valid user details.
