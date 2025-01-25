@@ -53,9 +53,9 @@ npx playwright install
 ## Run Application
 ```bash
 npx playwright test
-OR
+## OR
 npx playwright test Test_001_login_page.spec.js
-OR Run all test with HTML Reports
+## OR Run all test with HTML Reports
 npm run test:all_test_with_html-report
 ```
 
