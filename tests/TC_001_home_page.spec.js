@@ -1,5 +1,5 @@
 /* Scenario 1: 
-verify all the element of the home page of the website.
+Verify all the element of the home page of the website.
 
 Scenario Description: 
 User open the website and verifies all the elements of the home page.This is like a Smoke test. 

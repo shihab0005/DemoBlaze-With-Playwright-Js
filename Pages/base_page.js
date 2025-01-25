@@ -24,6 +24,9 @@ class BasePage {
   async waitForLocator(selector){
     await this.page.locator(selector).waitFor();
   }
+  async waitForLoadState(selector){
+    await this.page.waitForLoadState('networkidle');;
+  }
 
   async isElementVisible(selector, errorMessage) {
    
