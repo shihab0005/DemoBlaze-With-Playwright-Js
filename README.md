@@ -35,27 +35,6 @@ Test Steps:
 
 Testname: TC_001_home_page.spec.js
 ```
-```bash
-Scenario 2: Add new employee with valid user details.
-
-Scenario Description: 
-User Navigate To the Login page and Login with valid and invalid Credentials.Valid user Navigate to the Pim
-page add new employee with verification message.
-
-Testname: Test_002_pim_page.spec.js
-```
-
-```bash
- Scenario 3: Verify Admin Page with CURD Operation and verify all required field and valid, invalid credentials and messages. 
-
-
-Scenario Description: 
-User Navigate To the Login page and Login with valid and invalid Credentials.Valid user Navigate to the Admin
-page add new user ,search user,select user, update and also delete user with varification message.
-
-Testname: Test_003_admin_page.spec.js
-```
-
 ## Installation
 Install the dependencies and devDependencies to run the test.
 - Clone (OR) Download this repo as zip folder on to your local machine
@@ -63,7 +42,7 @@ Install the dependencies and devDependencies to run the test.
   
 **Clone the repository**
 ```bash
- https://github.com/shihab0005/OrangeHRM_Automation.git
+   https://github.com/shihab0005/DemoBlaze-With-Playwright-Js.git
 ```
 
 **Install dependencies**
@@ -76,16 +55,7 @@ npx playwright install
 npx playwright test
 OR
 npx playwright test Test_001_login_page.spec.js
-OR
-npx playwright test Test_003_admin_page.spec.js
+OR Run all test with HTML Reports
+npm run test:all_test_with_html-report
 ```
-## Run Application with Cucumber
 
-### Run All Cucumber Secnario
-```bash
-npm run cucumber:test
-```
-### Run All Cucumber Secnario With Cucumber Html Report
-```bash
-npm run cucumber:withHTMLReport
-```
