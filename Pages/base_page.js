@@ -21,15 +21,14 @@ class BasePage {
     return await this.page.pause();
   }
 
-  async waitForLocator(selector){
+  async waitForLocator(selector) {
     await this.page.locator(selector).waitFor();
   }
-  async waitForLoadState(selector){
-    await this.page.waitForLoadState('networkidle');;
+  async waitForLoadState(selector) {
+    await this.page.waitForLoadState("networkidle");
   }
 
   async isElementVisible(selector, errorMessage) {
-   
     const element = this.page.locator(selector);
     try {
       const isVisible = await element.isVisible();
